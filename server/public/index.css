@@ -2,13 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 h1{
 	font-family: 'Montserrat', sans-serif;
-	text-align: center;
-	margin: 0;
 }
 h4{
 	font-family: 'Montserrat', sans-serif;
-	text-align: center;
-	margin: 0;
 }
 p{
 	font-family: 'Roboto';
@@ -17,17 +13,6 @@ p{
 	width: 100%;
 	padding: 0;
 }
-
-.page-title{
-	font-size: 4em;
-}
-
-.page-subtitle{
-	font-size: 2.5em;
-	padding-top: 0.5rem;
-	padding-bottom: 0.8rem;
-}
-
 .section{
 	display: flex;
 	flex-direction: column;
@@ -44,20 +29,22 @@ p{
 	align-items: center;
 	justify-content: space-around;
 	width: 80%;
-	border-radius: 2%;
+	border-radius: 25px;
 	padding: 2em;
 	background: rgba(255, 255, 255, 0.6);
 }
-.sub-section{
-	display: flex;
-	flex-direction: column;
-	align-self: flex-end;
-	width: 80%;
-	margin: auto;
-	/* background-color: blue; */
+.section-bg h1{
+	font-size: 7em;
+	margin: 0
 }
-.sub-section-body-text{
-	font-size: 2.5rem;
+.section-bg h4{
+	font-size: 2.5em;
+	padding-top: 0.5rem;
+	padding-bottom: 0.8rem;
+	margin: 0
+}
+.section-bg p{
+	font-size: 2rem;
 	text-align: center;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -66,22 +53,39 @@ p{
 	display: flex;
 	width: 600px;
 	height: 600px;
-	margin: 1rem;
+	margin-bottom: 5rem;
 }
 .profile-pic{
 	border-radius: 50%;
 	object-fit: cover;
 }
-.bg-pic{
-	object-fit: cover;
-}
-.bg-pic-container{
-	display: flex;
-	position: relative; 
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-}
 .no-margin{
 	margin: 0;
+}
+.boxes-container{
+	display:flex
+}
+.boxes{
+	display: grid;
+	grid-template-columns: repeat(2, 22rem);
+	grid-template-rows: repeat(2, 22rem);
+	gap: 2rem;
+	margin-top: 2rem;
+}
+.box{
+	width: 100%;
+	height: 22rem;
+	border-radius: 5%;
+	background: url(./images/pexels-tatiana-syrikova-3975569.jpg);
+	background-size: cover;
+}
+.box h1{
+	font-size: 3rem;
+	margin-top: 1rem;
+	margin-left: 1rem;
+	text-align: left
+}
+.box p{
+	font-size: 1.5rem;
+	margin: 0 1rem;
 }
