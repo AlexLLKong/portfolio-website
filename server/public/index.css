@@ -123,3 +123,12 @@ p {
 	grid-column: 3/4;
 	grid-row: 1/2;
 }
+.fixed-burger {
+	position: fixed;
+	bottom: 10em;
+	right: 5em;
+	border-radius: 50%;
+	background: var(--light);
+	box-shadow: var(--shadow);
+	padding: 2.5rem;
+}
