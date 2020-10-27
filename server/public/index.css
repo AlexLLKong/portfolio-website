@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
-	--dark: #444444;
+	--dark: #333333;
 	--light: #ffffff;
 	--shadow: 0px 1px 10px 0px rgba(0, 0, 0, 1);
 }
@@ -18,6 +18,8 @@ p {
 	font-family: 'Roboto';
 }
 .container {
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	padding: 0;
 }
@@ -26,7 +28,7 @@ p {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
+	height: 1080px;
 	background-size: cover;
 }
 .section-bg {
@@ -34,32 +36,32 @@ p {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-around;
-	width: 80%;
-	border-radius: 25px;
-	padding: 2em;
+	width: 65%;
+	border-radius: 1.5rem;
+	padding: 0.5rem;
 	background: var(--light);
 	box-shadow: var(--shadow);
 }
 .section-bg h1 {
-	font-size: 7em;
+	/* font-size: 7rem; */
 	margin: 0;
 }
 .section-bg h4 {
-	font-size: 2.5em;
+	/* font-size: 2.5rem; */
 	padding-top: 0.5rem;
 	padding-bottom: 0.8rem;
 	margin: 0;
 }
 .section-bg p {
-	font-size: 2rem;
+	/* font-size: 2rem; */
 	text-align: center;
 	margin-top: 0;
 	margin-bottom: 0;
 }
 .profile-pic-container {
 	display: flex;
-	width: 600px;
-	height: 600px;
+	width: 15rem;
+	height: 15rem;
 	margin-bottom: 5rem;
 }
 .profile-pic {
@@ -70,40 +72,38 @@ p {
 .no-margin {
 	margin: 0;
 }
-.boxes-container {
-	display: flex;
-}
 .boxes {
 	display: grid;
-	grid-template-columns: repeat(2, 22rem);
-	grid-template-rows: repeat(2, 22rem);
+	grid-template-columns: repeat(1, 7rem);
+	grid-template-rows: repeat(4, 7rem);
 	gap: 2rem;
 	margin-top: 2rem;
 }
 .box {
 	width: 100%;
-	height: 22rem;
+	height: 100%;
 	border-radius: 5%;
 	background: url(./images/pexels-tatiana-syrikova-3975569.jpg);
 	background-size: cover;
 	box-shadow: var(--shadow);
 }
 .box h1 {
-	font-size: 3rem;
+	font-size: 1rem;
 	margin-top: 1rem;
 	margin-left: 1rem;
 	text-align: left;
 }
 .box p {
-	font-size: 1.5rem;
+	font-size: 0.7rem;
 	margin: 0 1rem;
 }
 .contact-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 7rem;
 	gap: 2rem;
 	padding-top: 2rem;
+	font-size: 0.5rem;
 }
 .contact-grid div {
 	display: flex;
@@ -113,22 +113,148 @@ p {
 	border-radius: 50%;
 	background: var(--light);
 	box-shadow: var(--shadow);
-	padding: 2rem;
+	padding: 1rem;
 }
 #gb-icon {
-	grid-column: 2/3;
+	grid-column: 1/2;
 	grid-row: 1/2;
 }
 #ln-icon {
-	grid-column: 3/4;
+	grid-column: 2/3;
 	grid-row: 1/2;
 }
 .fixed-burger {
 	position: fixed;
-	bottom: 10em;
-	right: 5em;
+	bottom: 4em;
+	right: 2em;
 	border-radius: 50%;
 	background: var(--light);
 	box-shadow: var(--shadow);
-	padding: 2.5rem;
+	padding: 1rem;
+	font-size: 0.5rem;
+}
+
+/* Media Queries */
+@media (min-height: 1080px) {
+	.section {
+		height: 100vh;
+	}
+}
+@media (min-width: 450px) {
+	.profile-pic-container {
+		height: 17rem;
+		width: 17rem;
+	}
+	.section-bg {
+		width: 55%;
+		padding: 1rem;
+	}
+	.section-bg h1 {
+		font-size: 2.5rem;
+	}
+	.section-bg h4 {
+		font-size: 1rem;
+	}
+	.section-bg p {
+		font-size: 1rem;
+	}
+	.boxes {
+		grid-template-columns: repeat(1, 18rem);
+		grid-template-rows: repeat(4, 18rem);
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+	.box h1 {
+		font-size: 3rem;
+	}
+	.box p {
+		font-size: 1.5rem;
+	}
+	.contact-grid {
+		font-size: 0.75rem;
+	}
+	.contact-grid div {
+		padding: 1rem;
+	}
+	.fixed-burger {
+		bottom: 4em;
+		right: 2.5em;
+		padding: 1.5rem;
+		font-size: 1rem;
+	}
+}
+@media (min-width: 768px) {
+	.profile-pic-container {
+		height: 32rem;
+		width: 32rem;
+	}
+	.section-bg {
+		width: 60%;
+		padding: 1.5rem;
+	}
+	.section-bg h1 {
+		font-size: 4.5rem;
+	}
+	.section-bg h4 {
+		font-size: 1.75rem;
+	}
+	.section-bg p {
+		font-size: 1.75rem;
+	}
+	.boxes {
+		grid-template-columns: repeat(2, 22rem);
+		grid-template-rows: repeat(2, 22rem);
+		margin-top: 4rem;
+	}
+	.box h1 {
+		font-size: 3rem;
+	}
+	.box p {
+		font-size: 2rem;
+	}
+	.contact-grid div {
+		font-size: 2rem;
+		padding: 3rem;
+		margin-top: 3rem;
+	}
+	.fixed-burger {
+		bottom: 5em;
+		right: 2.5em;
+		padding: 2rem;
+		font-size: 1.5rem;
+	}
+}
+@media (min-width: 1024px) {
+	.profile-pic-container {
+		height: 30rem;
+		width: 30rem;
+	}
+	.section-bg {
+		width: 40%;
+		padding: 2rem;
+	}
+	.section-bg h1 {
+		font-size: 4.25rem;
+	}
+	.section-bg h4 {
+		font-size: 1.75rem;
+	}
+	.section-bg p {
+		font-size: 1.25rem;
+	}
+	.boxes {
+		margin-top: 2rem;
+	}
+	.box h1 {
+		font-size: 3rem;
+	}
+	.box p {
+		font-size: 1.5rem;
+	}
+	.contact-grid div {
+		padding: 2.5rem;
+	}
+	.fixed-burger {
+		display: none;
+	}
 }
