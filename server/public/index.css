@@ -23,6 +23,20 @@ p {
 	width: 100%;
 	padding: 0;
 }
+.main-nav {
+	display: none;
+}
+
+.main-nav ul li:hover {
+	background-color: var(--light);
+}
+.main-nav ul a {
+	text-decoration: none;
+	color: var(--light);
+}
+.main-nav ul a li:hover {
+	color: var(--dark);
+}
 .section {
 	display: flex;
 	flex-direction: column;
@@ -225,6 +239,28 @@ p {
 	}
 }
 @media (min-width: 1024px) {
+	.main-nav {
+		display: flex;
+		justify-content: flex-start;
+	}
+	.main-nav ul {
+		position: fixed;
+		display: flex;
+		flex-direction: row;
+		list-style-type: none;
+		padding: 0;
+	}
+	.main-nav ul li {
+		padding: 0.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow);
+		background-color: var(--dark);
+		font-family: Roboto;
+		margin: 0 1rem;
+		text-align: center;
+		font-size: 2rem;
+		padding: 1rem;
+	}
 	.profile-pic-container {
 		height: 30rem;
 		width: 30rem;
