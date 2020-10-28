@@ -135,10 +135,10 @@ p {
 .contact-grid a div i {
 	color: black;
 }
-.contact-grid a:hover div i {
+.contact-grid a:active div i {
 	color: white;
 }
-.contact-grid a:hover div {
+.contact-grid a:active div {
 	background-color: black;
 }
 #gb-icon {
@@ -158,6 +158,12 @@ p {
 	box-shadow: var(--shadow);
 	padding: 1rem;
 	font-size: 0.5rem;
+}
+.fixed-burger:active {
+	background-color: black;
+}
+.fixed-burger:active i {
+	color: white;
 }
 
 /* Media Queries */
@@ -304,5 +310,11 @@ p {
 	}
 	.fixed-burger {
 		display: none;
+	}
+	.contact-grid a:hover div i {
+		color: white;
+	}
+	.contact-grid a:hover div {
+		background-color: black;
 	}
 }
