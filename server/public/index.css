@@ -149,21 +149,73 @@ p {
 	grid-column: 2/3;
 	grid-row: 1/2;
 }
-.fixed-burger {
+.burger-menu-container {
 	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	bottom: 4em;
 	right: 2em;
+}
+.burger-menu-container a div i {
+	color: black;
+}
+.burger-menu-container a:active div i {
+	color: white;
+}
+.burger-menu-container a:active div {
+	background-color: black;
+}
+.burger-menu-container a {
+	text-decoration: none;
+}
+.fixed-burger {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
 	border-radius: 50%;
 	background: var(--light);
 	box-shadow: var(--shadow);
-	padding: 1rem;
-	font-size: 0.5rem;
+	height: 0;
+	width: 0;
+	padding: 4rem;
+	font-size: 1.5rem;
+	transition: all 0.1s;
 }
 .fixed-burger:active {
 	background-color: black;
 }
 .fixed-burger:active i {
 	color: white;
+}
+.burger-btn-transition {
+	padding: 4rem;
+	font-size: 1.5rem;
+}
+.burger-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border-radius: 50%;
+	background: var(--light);
+	box-shadow: var(--shadow);
+	margin-bottom: 1rem;
+	font-size: 0.4rem;
+	width: 0;
+	height: 0;
+	transition: padding 0.5s ease-in-out, font-size 0.5s ease-in-out, color 0.1s;
+}
+.icon-transition-post {
+	font-size: 1rem;
+}
+.icon-transition-def {
+	font-size: 0;
+	transition: font-size 0.5s ease-in-out, color 0.1s;
+}
+#projects-icon {
+	margin-top: 0.2em;
 }
 
 /* Media Queries */
@@ -208,12 +260,6 @@ p {
 	.contact-grid div {
 		padding: 1rem;
 	}
-	.fixed-burger {
-		bottom: 4em;
-		right: 2.5em;
-		padding: 1.5rem;
-		font-size: 1rem;
-	}
 }
 @media (min-width: 768px) {
 	.profile-pic-container {
@@ -248,12 +294,6 @@ p {
 		font-size: 2rem;
 		padding: 3rem;
 		margin-top: 3rem;
-	}
-	.fixed-burger {
-		bottom: 5em;
-		right: 2.5em;
-		padding: 2rem;
-		font-size: 1.5rem;
 	}
 }
 @media (min-width: 1024px) {
@@ -309,6 +349,9 @@ p {
 		padding: 2.5rem;
 	}
 	.fixed-burger {
+		display: none;
+	}
+	.burger-btn {
 		display: none;
 	}
 	.contact-grid a:hover div i {
