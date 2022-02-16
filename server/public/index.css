@@ -75,16 +75,12 @@ p {
 	margin-top: 0;
 	margin-bottom: 0;
 }
-.profile-pic-container {
-	display: flex;
-	width: 15rem;
-	height: 15rem;
-	margin-bottom: 5rem;
-}
 .profile-pic {
+  width: 10em;
+  height: 10em;
 	border-radius: 50%;
 	object-fit: cover;
-	box-shadow: var(--shadow);
+  padding-bottom: 1em;
 }
 .no-margin {
 	margin: 0;
@@ -265,10 +261,10 @@ p {
 	}
 }
 @media (min-width: 768px) {
-	.profile-pic-container {
-		height: 32rem;
-		width: 32rem;
-	}
+	.profile-pic {
+    width: 14em;
+    height: 14em;
+  }
 	.section-bg {
 		width: 60%;
 		padding: 1.5rem;
@@ -322,9 +318,9 @@ p {
 		font-size: 2rem;
 		padding: 1rem;
 	}
-	.profile-pic-container {
-		height: 30rem;
-		width: 30rem;
+	.profile-pic {
+		height: 18em;
+		width: 18em;
 	}
 	.section-bg {
 		width: 40%;
