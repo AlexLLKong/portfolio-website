@@ -93,22 +93,32 @@ p {
 	margin-top: 2rem;
 }
 .box {
-	width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
 	height: 100%;
-	border-radius: 5%;
+	border-radius: 1em;
 	background: url(./images/pexels-tatiana-syrikova-3975569.jpg);
 	background-size: cover;
 	box-shadow: var(--shadow);
 }
+#lgfr {
+  background: url(./images/lgfr.jpg);
+  background-size: cover;
+}
 .box h1 {
-	font-size: 1rem;
-	margin-top: 1rem;
-	margin-left: 1rem;
+	font-size: 1em;
+	padding-left: 0.5em;
+  margin: 0;
+  border-radius: 0.3em;
 	text-align: left;
+  background: rgba(255, 255, 255, 1);
 }
 .box p {
+  display: block;
 	font-size: 0.7rem;
 	margin: 0 1rem;
+  background: rgba(255, 255, 255, 1);
 }
 .contact-grid {
 	display: grid;
