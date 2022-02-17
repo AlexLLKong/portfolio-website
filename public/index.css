@@ -106,6 +106,17 @@ p {
   background: url(./images/lgfr.jpg);
   background-size: cover;
 }
+#tetris {
+  background: url(./images/tetris-clone.gif);
+  background-size: cover;
+}
+#checkers {
+  background: url(./images/checkers.gif);
+  background-size: cover;
+}
+#comp1800 {
+
+}
 .box h1 {
 	font-size: 1em;
 	padding-left: 0.5em;
