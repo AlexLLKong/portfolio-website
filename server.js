@@ -6,6 +6,10 @@ const livereload = require('livereload')
 const fs = require('fs');
 const PORT = process.env.PORT || 5000;
 if (process.env.PORT) {
+  app.use("/js", express.static("./public/js"));
+  app.use("/css", express.static("./public/css"));
+  app.use("/img", express.static("./public/img"));
+
   app.get("/", (req, res) => {
     res.send(fs.readFileSync("./public/index.html", "utf8"));
   })

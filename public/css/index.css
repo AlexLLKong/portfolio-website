@@ -98,20 +98,20 @@ p {
   width: 100%;
 	height: 100%;
 	border-radius: 1em;
-	background: url(./images/pexels-tatiana-syrikova-3975569.jpg);
+	background: url(/img/pexels-tatiana-syrikova-3975569.jpg);
 	background-size: cover;
 	box-shadow: var(--shadow);
 }
 #lgfr {
-  background: url(./images/lgfr.jpg);
+  background: url(/img/lgfr.jpg);
   background-size: cover;
 }
 #tetris {
-  background: url(./images/tetris-clone.gif);
+  background: url(/img/tetris-clone.gif);
   background-size: cover;
 }
 #checkers {
-  background: url(./images/checkers.gif);
+  background: url(/img/checkers.gif);
   background-size: cover;
 }
 #comp1800 {
