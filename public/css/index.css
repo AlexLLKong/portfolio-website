@@ -92,6 +92,10 @@ p {
 	gap: 2rem;
 	margin-top: 2rem;
 }
+.boxes a{
+  text-decoration: none;
+  color: black;
+}
 .box {
   display: flex;
   flex-direction: column-reverse;
